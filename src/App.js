@@ -1,18 +1,17 @@
-import React from 'react';
+import { Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 import Cart from './pages/Cart';
+import Header from './pages/Header';
+
 function App() {
   return (
-    <div >
-      <h1
-        style={{ textAlign: "center", marginTop: "20px", fontFamily: "Arial, sans-serif", color: "#333", }}>
-        Hello to your store CreoShop
-      </h1>
-      <br></br>
-      <Home />
-      <hr></hr>
-      <Cart />
-    </div>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+    </>
   );
 }
 
